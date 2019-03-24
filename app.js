@@ -8,8 +8,7 @@ app.js    API para explotar la funcionalidad de códigos postales
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-//const MongoDBUrl='mongodb://gbandala:Romano#10@cluster0-shard-00-02-xv2n8.mongodb.net:27017/postales?ssl=true&authSource=admin';
-const MongoDBUrl='mongodb://gbandala:Romano#10@cluster0-shard-00-02-xv2n8.mongodb.net:27017/learning_mongo?ssl=true&authSource=admin';
+const MongoDBUrl = require('./keys');
 const CPController = require('./controllers/admin');
 
 //2.-Configurar colección y conexión BD, web server y parsee los datos
@@ -33,7 +32,7 @@ app.get('/api/codigos',CPController.CPInq);
 app.listen(port,()=>{
     console.log('Server Inicializado en el puerto: '+port);
     //definir conexion incicial, para una sola BD, cuando usas otra BD, .createConnection
-    mongoose.connect(MongoDBUrl, { useNewUrlParser: true }).then(() => {
+    mongoose.connect(MongoDBUrl.conn, { useNewUrlParser: true }).then(() => {
              console.log('Server mongodb Conectado...') }, err =>
              { console.log(err)});
   });
