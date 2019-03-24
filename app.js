@@ -1,16 +1,7 @@
 /*
 app.js    API para explotar la funcionalidad de códigos postales
 -----------------------------------------------------------------------------------------
-Probar el código
-GET
-1.- Obtiene los municipios "/api/municipios"
-2.- Obtiene las colonias x el nombre del municipio "/api/colonias/:mun"
-    -- 'localhost:4000/api/municipios/Toluca'
-3.- Obtiene las colonias x el cp "/api/colonias/cps/:CP"
-    -- 'localhost:4000/api/colonias/cps/50040
-4.- Obtiene toda la informacion x nombre de la colonia "/api/colonias/names/:name"
-    -- 'localhost:4000/api/api/colonias/names/Electricistas Locales
------------------------------------------------------------------------------------------
+
 */
 
 //1.-Requerir librerías y drivers
