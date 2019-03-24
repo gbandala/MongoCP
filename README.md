@@ -8,6 +8,7 @@ Prerequisitos
 -Modificar Headers o adaptar el cpmodel con mismos atributos
 
 d_estado, d_ciudad, D_mnpio,d_asenta, d_CP
+
 Estado, Ciudad, Municipio, Colonia, CP
 los demas descartarlos
 
