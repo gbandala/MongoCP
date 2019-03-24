@@ -12,7 +12,7 @@ d_estado, d_ciudad, D_mnpio,d_asenta, d_CP
 Estado, Ciudad, Municipio, Colonia, CP
 los demas descartarlos
 
--Connvertir a Json los datos
+-Convertir a Json los datos
 
 -Importar localmente o en cuenta cloud.mongodb
 
