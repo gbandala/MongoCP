@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Consumir API de Codigos Postales</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="controller/controller.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <h1>Codigos Postales</h1>
+            </div>
+        </div>
+    </nav>
+    <div class="container" ng-controller="AppCtrl">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <h4>Buscando en cascada desde el Municipio</h4>
+                <br>
+                <div class="row" id="divmunicipios">
+                    <div class="col-md-6 col-lg-6">
+                        <select class="form-control" ng-change="GetColonias(municipio.elegido)" ng-model="municipio.elegido" ng-options="municipio._id.Municipio for municipio in municipios">
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="row" id="divcolonias">
+                    <div class="col-md-6 col-lg-6">
+                        <select class="form-control" ng-change="GetInfo()"  ng-model="colonia.elegido" ng-options="colonia.Colonia for colonia in colonias">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" id="divInfo">
+            <div class="col-md-6 col-lg-12" style='overflow-y:auto; height:400px;'>
+                <div class="well" >
+                    <div class="breadcrumb"  ng-repeat="info in infos">
+                        <ul>
+                            <li><strong>Estado: </strong>{{info.Estado}}</li>
+                            <li><strong>Ciudad: </strong>{{info.Ciudad}}</li>
+                            <li><strong>Municipio: </strong>{{info.Municipio}}</li>
+                            <li><strong>Colonia: </strong>{{info.Colonia}}</li>
+                            <li><strong>CP: </strong>{{info.CP}}</li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
