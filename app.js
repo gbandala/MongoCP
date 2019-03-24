@@ -17,7 +17,7 @@ const port = 4000;
 app.use(bodyParser.json());
 
 //Get municipios
-app.get('/', (req, res, next) => { res.send('Por favor use /api/municipios o colonias');});
+app.get('/', (req, res, next) => { res.send('Por favor use /api/ciudades o codigos');});
 app.get('/api/ciudades',CPController.CityInq);
 app.get('/api/ciudades/municipios',CPController.MunInq);
 app.get('/api/ciudades/municipios/colonias/:municipio',CPController.ColInqByMun);
